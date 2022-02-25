@@ -1,4 +1,4 @@
-import axios from '../api/axios'
+import http from '../config/http'
 
 /**
  * 获取当前定位城市
@@ -14,7 +14,7 @@ export async function getCurrentCity() {
       return new Promise((resolve, reject) => {
         try {
           localCity.get(async res => {
-            const result = await axios.get(`http://localhost:8080/area/info?name=${res.name}`)
+            const result = await http.get(`http://localhost:8080/area/info?name=${res.name}`)
             localStorage.setItem('localCity', JSON.stringify(result.data.body))
             resolve(result.data.body)
           })
