@@ -9,6 +9,6 @@ module.exports = {
     "quotes": ["error", "double"],
     "no-console": "off",
     "no-debugger": "off",
-    "indent": ["error", 2]
+    "indent": ["error", 2],
   }
 }
